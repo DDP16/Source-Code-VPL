@@ -1,0 +1,10 @@
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\bin\Debug\Paint.exe.config
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\bin\Debug\Paint.exe
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\bin\Debug\Paint.pdb
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\obj\Debug\Paint.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\obj\Debug\Paint.csproj.GenerateResource.cache
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\obj\Debug\Paint.exe
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint\obj\Debug\Paint.pdb
