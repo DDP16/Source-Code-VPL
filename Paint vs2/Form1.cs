@@ -29,6 +29,7 @@ namespace Paint
         private Bitmap bmp,bmp_temp;
         private DrawingMode drawingMode = DrawingMode.Pen;
         private Point PreviousPoint = new Point(0, 0);
+        private Point NewPoint = new Point(0, 0);
         private bool IsPainting = false;
         private Pen pen = new Pen(Color.Black, 2), pen2 = new Pen(Color.Black, 2);
         private Graphics g;
@@ -37,7 +38,8 @@ namespace Paint
         private GraphicsPath StarPath = new GraphicsPath();
         private Point pt0 = new Point(0, 0), pt1 = new Point(0, 0), pt2 = new Point(0, 0), pt3 = new Point(0, 0);
         private int checkStatus = 0;
-        
+        private int X, Y, W, H;
+
         public Form1()
         {
             InitializeComponent();
@@ -110,7 +112,8 @@ namespace Paint
         {
             if (IsPainting)
             {
-                int X, Y, W, H;
+                //int X, Y, W, H;
+                NewPoint = e.Location;
                 switch (drawingMode)
                 {
                     case DrawingMode.Pen:
@@ -118,28 +121,118 @@ namespace Paint
                         g2.DrawLine(pen2, PreviousPoint, e.Location);
                         PreviousPoint = e.Location;
                         break;
+                    //case DrawingMode.Rectangle:
+                    //    g.Clear(Color.White);
+                    //    g.DrawImageUnscaled(bmp, 0, 0);
+                    //    X = Math.Min(PreviousPoint.X, e.Location.X);
+                    //    Y = Math.Min(PreviousPoint.Y, e.Location.Y);
+                    //    W = Math.Abs(e.Location.X - PreviousPoint.X);
+                    //    H = Math.Abs(e.Location.Y - PreviousPoint.Y);
+                    //    currentRect = new Rectangle(X,Y,W,H);
+                    //    g.DrawRectangle(pen, currentRect);
+                    //    break;
+                    //case DrawingMode.Square:
+                    //    g.Clear(Color.White);
+                    //    g.DrawImageUnscaled(bmp, 0, 0);
+                    //    W = Math.Min(Math.Abs(e.Location.X - PreviousPoint.X),Math.Abs(e.Location.Y - PreviousPoint.Y));
+                    //    X = PreviousPoint.X <= e.Location.X ? PreviousPoint.X : PreviousPoint.X - W;
+                    //    Y = PreviousPoint.Y <= e.Location.Y ? PreviousPoint.Y : PreviousPoint.Y - W;
+                    //    currentRect = new Rectangle(X, Y, W, W);
+                    //    g.DrawRectangle(pen, currentRect);
+                    //    break;
+                    //case DrawingMode.Ellipse:
+                    //    g.Clear(Color.White);
+                    //    g.DrawImageUnscaled(bmp, 0, 0);
+                    //    X = Math.Min(PreviousPoint.X, e.Location.X);
+                    //    Y = Math.Min(PreviousPoint.Y, e.Location.Y);
+                    //    W = Math.Abs(e.Location.X - PreviousPoint.X);
+                    //    H = Math.Abs(e.Location.Y - PreviousPoint.Y);
+                    //    currentRect = new Rectangle(X, Y, W, H);
+                    //    g.DrawEllipse(pen, currentRect);
+                    //    break;
+                    //case DrawingMode.Circle:
+                    //    g.Clear(Color.White);
+                    //    g.DrawImageUnscaled(bmp, 0, 0);
+                    //    W = Math.Min(Math.Abs(e.Location.X - PreviousPoint.X), Math.Abs(e.Location.Y - PreviousPoint.Y));
+                    //    X = PreviousPoint.X <= e.Location.X ? PreviousPoint.X : PreviousPoint.X - W;
+                    //    Y = PreviousPoint.Y <= e.Location.Y ? PreviousPoint.Y : PreviousPoint.Y - W;
+                    //    currentRect = new Rectangle(X, Y, W, W);
+                    //    g.DrawEllipse(pen, currentRect);
+                    //    break;
+                    //case DrawingMode.Line:
+                    //    g.Clear(Color.White);
+                    //    g.DrawImageUnscaled(bmp, 0, 0);
+                    //    g.DrawLine(pen, PreviousPoint, e.Location);
+                    //    break;
+                    //case DrawingMode.Star:
+                    //    g.Clear(Color.White);
+                    //    g.DrawImageUnscaled(bmp, 0, 0);
+                    //    int dt = e.Location.X - PreviousPoint.X;
+                    //    StarPath.Dispose();
+                    //    StarPath = new GraphicsPath();
+                    //    StarPath.AddLine(PreviousPoint.X ,PreviousPoint.Y + dt * 11 / 30, PreviousPoint.X + dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30);
+                    //    StarPath.AddLine(PreviousPoint.X + dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30, PreviousPoint.X + dt / 2, PreviousPoint.Y);
+                    //    StarPath.AddLine(PreviousPoint.X + dt / 2, PreviousPoint.Y, e.Location.X - dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30);
+                    //    StarPath.AddLine(e.Location.X - dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30, e.Location.X, PreviousPoint.Y + dt * 11 / 30);
+                    //    StarPath.AddLine(e.Location.X, PreviousPoint.Y + dt * 11 / 30, e.Location.X - dt * 14 / 50, PreviousPoint.Y + dt * 18 / 30);
+                    //    StarPath.AddLine(e.Location.X - dt * 14 / 50, PreviousPoint.Y + dt * 18 / 30, PreviousPoint.X + dt * 7 / 8, PreviousPoint.Y + dt);
+                    //    StarPath.AddLine(PreviousPoint.X + dt * 7 / 8, PreviousPoint.Y + dt, PreviousPoint.X + dt / 2, PreviousPoint.Y + dt * 3 / 4);
+                    //    StarPath.AddLine(PreviousPoint.X + dt / 2, PreviousPoint.Y + dt * 3 / 4, PreviousPoint.X + dt * 1 / 8, PreviousPoint.Y + dt);
+                    //    StarPath.AddLine(PreviousPoint.X + dt * 1 / 8, PreviousPoint.Y + dt, PreviousPoint.X + dt * 14 / 50, PreviousPoint.Y + dt * 18 / 30);
+                    //    StarPath.AddLine(PreviousPoint.X + dt * 14 / 50, PreviousPoint.Y + dt * 18 / 30, PreviousPoint.X, PreviousPoint.Y + dt * 11 / 30);
+
+                    //    StarPath.AddLine(PreviousPoint.X, PreviousPoint.Y + dt * 11 / 30, PreviousPoint.X + dt * 1 / 100, PreviousPoint.Y + dt * 11 / 30);
+                    //    g.DrawPath(pen, StarPath);
+                    //    break;
+                    //case DrawingMode.Curve:
+                    //    g.Clear(Color.White);
+                    //    g.DrawImageUnscaled(bmp, 0, 0);
+                    //    switch (checkStatus)
+                    //    {
+                    //        case 0:
+                    //            pt0 = PreviousPoint;
+                    //            pt1 = PreviousPoint;
+                    //            pt2 = e.Location;
+                    //            pt3 = e.Location;
+                    //            break;
+                    //        case 1:
+                    //            pt1 = e.Location;
+                    //            break;
+                    //        case 2:
+                    //            pt2 = e.Location;
+                    //            break;
+                    //    }
+                    //    g.DrawBezier(pen, pt0, pt1, pt2, pt3);
+                    //    break;
+                }
+            }
+        }
+
+        private void splitContainer1_Panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (IsPainting)
+            {
+                switch (drawingMode)
+                {
+                    case DrawingMode.Pen:
+                        break;
                     case DrawingMode.Rectangle:
-                        g.Clear(Color.White);
-                        g.DrawImageUnscaled(bmp, 0, 0);
                         X = Math.Min(PreviousPoint.X, e.Location.X);
                         Y = Math.Min(PreviousPoint.Y, e.Location.Y);
                         W = Math.Abs(e.Location.X - PreviousPoint.X);
                         H = Math.Abs(e.Location.Y - PreviousPoint.Y);
-                        currentRect = new Rectangle(X,Y,W,H);
+                        currentRect = new Rectangle(X, Y, W, H);
                         g.DrawRectangle(pen, currentRect);
                         break;
                     case DrawingMode.Square:
-                        g.Clear(Color.White);
-                        g.DrawImageUnscaled(bmp, 0, 0);
-                        W = Math.Min(Math.Abs(e.Location.X - PreviousPoint.X),Math.Abs(e.Location.Y - PreviousPoint.Y));
+                        W = Math.Min(Math.Abs(e.Location.X - PreviousPoint.X), Math.Abs(e.Location.Y - PreviousPoint.Y));
                         X = PreviousPoint.X <= e.Location.X ? PreviousPoint.X : PreviousPoint.X - W;
                         Y = PreviousPoint.Y <= e.Location.Y ? PreviousPoint.Y : PreviousPoint.Y - W;
                         currentRect = new Rectangle(X, Y, W, W);
                         g.DrawRectangle(pen, currentRect);
+                        //g2.DrawRectangle(pen, currentRect);
                         break;
                     case DrawingMode.Ellipse:
-                        g.Clear(Color.White);
-                        g.DrawImageUnscaled(bmp, 0, 0);
                         X = Math.Min(PreviousPoint.X, e.Location.X);
                         Y = Math.Min(PreviousPoint.Y, e.Location.Y);
                         W = Math.Abs(e.Location.X - PreviousPoint.X);
@@ -148,26 +241,22 @@ namespace Paint
                         g.DrawEllipse(pen, currentRect);
                         break;
                     case DrawingMode.Circle:
-                        g.Clear(Color.White);
-                        g.DrawImageUnscaled(bmp, 0, 0);
                         W = Math.Min(Math.Abs(e.Location.X - PreviousPoint.X), Math.Abs(e.Location.Y - PreviousPoint.Y));
                         X = PreviousPoint.X <= e.Location.X ? PreviousPoint.X : PreviousPoint.X - W;
                         Y = PreviousPoint.Y <= e.Location.Y ? PreviousPoint.Y : PreviousPoint.Y - W;
                         currentRect = new Rectangle(X, Y, W, W);
                         g.DrawEllipse(pen, currentRect);
+                        //g2.DrawEllipse(pen, currentRect);
                         break;
                     case DrawingMode.Line:
-                        g.Clear(Color.White);
-                        g.DrawImageUnscaled(bmp, 0, 0);
                         g.DrawLine(pen, PreviousPoint, e.Location);
+                        //g2.DrawLine(pen, PreviousPoint, e.Location);
                         break;
                     case DrawingMode.Star:
-                        g.Clear(Color.White);
-                        g.DrawImageUnscaled(bmp, 0, 0);
                         int dt = e.Location.X - PreviousPoint.X;
                         StarPath.Dispose();
                         StarPath = new GraphicsPath();
-                        StarPath.AddLine(PreviousPoint.X ,PreviousPoint.Y + dt * 11 / 30, PreviousPoint.X + dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30);
+                        StarPath.AddLine(PreviousPoint.X, PreviousPoint.Y + dt * 11 / 30, PreviousPoint.X + dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30);
                         StarPath.AddLine(PreviousPoint.X + dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30, PreviousPoint.X + dt / 2, PreviousPoint.Y);
                         StarPath.AddLine(PreviousPoint.X + dt / 2, PreviousPoint.Y, e.Location.X - dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30);
                         StarPath.AddLine(e.Location.X - dt * 11 / 30, PreviousPoint.Y + dt * 11 / 30, e.Location.X, PreviousPoint.Y + dt * 11 / 30);
@@ -177,13 +266,11 @@ namespace Paint
                         StarPath.AddLine(PreviousPoint.X + dt / 2, PreviousPoint.Y + dt * 3 / 4, PreviousPoint.X + dt * 1 / 8, PreviousPoint.Y + dt);
                         StarPath.AddLine(PreviousPoint.X + dt * 1 / 8, PreviousPoint.Y + dt, PreviousPoint.X + dt * 14 / 50, PreviousPoint.Y + dt * 18 / 30);
                         StarPath.AddLine(PreviousPoint.X + dt * 14 / 50, PreviousPoint.Y + dt * 18 / 30, PreviousPoint.X, PreviousPoint.Y + dt * 11 / 30);
-
                         StarPath.AddLine(PreviousPoint.X, PreviousPoint.Y + dt * 11 / 30, PreviousPoint.X + dt * 1 / 100, PreviousPoint.Y + dt * 11 / 30);
                         g.DrawPath(pen, StarPath);
+                        //g2.DrawPath(pen, StarPath);
                         break;
                     case DrawingMode.Curve:
-                        g.Clear(Color.White);
-                        g.DrawImageUnscaled(bmp, 0, 0);
                         switch (checkStatus)
                         {
                             case 0:
@@ -199,46 +286,36 @@ namespace Paint
                                 pt2 = e.Location;
                                 break;
                         }
+                        g.Clear(Color.White);
                         g.DrawBezier(pen, pt0, pt1, pt2, pt3);
-                        break;
-                }
-            }
-        }
-
-        private void splitContainer1_Panel2_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (IsPainting)
-            {
-                switch (drawingMode)
-                {
-                    case DrawingMode.Pen:
-                        break;
-                    case DrawingMode.Rectangle:
-                    case DrawingMode.Square:
-                        g2.DrawRectangle(pen, currentRect);
-                        break;
-                    case DrawingMode.Ellipse:
-                    case DrawingMode.Circle:
-                        g2.DrawEllipse(pen, currentRect);
-                        break;
-                    case DrawingMode.Line:
-                        g2.DrawLine(pen, PreviousPoint, e.Location);
-                        break;
-                    case DrawingMode.Star:
-                        g2.DrawPath(pen, StarPath);
-                        break;
-                    case DrawingMode.Curve:
                         if (checkStatus < 2)
                             checkStatus++;
                         else
                         {
                             checkStatus = 0;
-                            g2.DrawBezier(pen, pt0, pt1, pt2, pt3);
+                            //g2.DrawBezier(pen, pt0, pt1, pt2, pt3);
                         }
                         break;
                 }
             }
             IsPainting = false;
+        }
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics gp = e.Graphics;
+            switch (drawingMode)
+            {
+                case DrawingMode.Pen:
+                    break;
+                case DrawingMode.Rectangle:
+                    X = Math.Min(PreviousPoint.X, NewPoint.X);
+                    Y = Math.Min(PreviousPoint.Y, NewPoint.Y);
+                    W = Math.Abs(NewPoint.X - PreviousPoint.X);
+                    H = Math.Abs(NewPoint.Y - PreviousPoint.Y);
+                    currentRect = new Rectangle(X, Y, W, H);
+                    gp.DrawRectangle(pen, currentRect);
+                    break;
+            }
         }
 
         private void cbDashStyle_SelectedIndexChanged(object sender, EventArgs e)

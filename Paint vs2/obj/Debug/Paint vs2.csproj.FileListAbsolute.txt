@@ -8,3 +8,13 @@ C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\L
 C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint vs2.csproj.CoreCompileInputs.cache
 C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint.exe
 C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\C#\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint.pdb
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\bin\Debug\Paint.exe.config
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\bin\Debug\Paint.exe
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\bin\Debug\Paint.pdb
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint vs2.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint.Form1.resources
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint vs2.csproj.GenerateResource.cache
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint vs2.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint.exe
+C:\Users\PC\Documents\Tài Liệu Đại Học\2-HK1 Năm 2023-2024 (Năm Hai)\Lập trình trực quan\Do an\Chuong5_DangDatPhat_22521063\Paint vs2\obj\Debug\Paint.pdb
